@@ -176,8 +176,8 @@ export default class QuickLZ {
 }
 
 
-// Compress and Compare, note: repeat(100)
 // Bun run .\src\quicklz.ts
+// Compress and Compare
 const originalText = "test".repeat(2);
 const rawData = new TextEncoder().encode(originalText);
 const compressedData = QuickLZ.compress(rawData);

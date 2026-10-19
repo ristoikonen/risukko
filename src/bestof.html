@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Risukko Glow2 v2.4 — High-Density Lossless Data-to-Image Engine</title>
+  <title>bestof?</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -28,7 +28,13 @@
         <div>
           <div class="flex items-center space-x-2">
             <span class="font-bold text-xl tracking-tight text-slate-900">RISUKKO</span>
-            <span class="px-2 py-0.5 text-xs font-semibold bg-blue-100 text-blue-700 rounded-full">Glow2 v2.4</span>
+            <!-- <span class="px-2 py-0.5 text-xs font-semibold bg-blue-100 text-blue-700 rounded-full">API Running</span> -->
+
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-black-100 text-emerald-800">
+          <span class="w-1.5 h-1.5 mr-1.5 bg-emerald-500 rounded-full animate-pulse"></span>Site online
+        </span>
+
+
           </div>
           <p class="text-xs text-slate-500">High-Density Lossless Data-to-Image Encoding Engine</p>
         </div>
@@ -44,9 +50,7 @@
       </nav>
 
       <div class="flex items-center space-x-3">
-        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-          <span class="w-1.5 h-1.5 mr-1.5 bg-emerald-500 rounded-full animate-pulse"></span> risukko.com active
-        </span>
+
       </div>
     </div>
   </header>
@@ -96,8 +100,10 @@
         <div class="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between relative overflow-hidden">
           <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
           <div>
+
+            
             <div class="flex items-center justify-between mb-4 relative z-10">
-              <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded-md border border-cyan-800">Candidate B</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded-md border border-cyan-800">Candidate Bs</span>
               <span class="text-xs text-slate-400 font-mono">Dark Neon / Telemetry</span>
             </div>
             <h3 class="text-lg font-bold text-white mb-1">Terminal Matrix Style</h3>
@@ -114,7 +120,7 @@
                 <input type="text" id="id-b" placeholder="OK-01-RI-PACKET-9B" required
                   class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-cyan-300 placeholder-slate-500 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 text-sm font-mono outline-none transition-all">
               </div>
-              <button type="submit" class="w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-sm shadow-lg transition-colors">
+              <button type="submit" class="w-full py-3 bg-orange-600 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-sm shadow-lg transition-colors">
                 Execute Pipeline (Candidate B)
               </button>
             </form>
@@ -198,9 +204,9 @@
       </div>
       <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col items-center justify-center">
         <div class="w-full max-w-md bg-slate-900 rounded-xl p-6 text-center text-white">
-          <div class="text-xs font-mono text-cyan-400 mb-2">CANVAS RASTER PREVIEW (1024x1024)</div>
+          <div class="text-xs font-mono text-orange-400 mb-2">CANVAS RASTER PREVIEW (1024x1024)</div>
           <div class="h-32 bg-slate-950 rounded-lg flex items-center justify-center border border-slate-800 mb-4">
-            <span class="text-xs font-mono text-slate-500">[ Lossless PNG Stream Ready ]</span>
+            <span class="text-xs font-mono text-white-500">[ Lossless PNG Stream Ready for Henri Ikonen ... ]</span>
           </div>
           <button onclick="alert('Exporting lossless PNG with embedded RS parity and RGB triplets...')" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-medium transition-colors">
             Download Lossless Asset
@@ -239,6 +245,14 @@
           <span class="text-slate-500"># Test Curl Command</span>
           <div class="text-emerald-400 mt-1">curl -X GET "https://risukko.com/api/asset/UklBAGEAAAAEAAEAPwAAAEFOS0EtMDE3Mjg="</div>
         </div>
+        <div>
+          <span class="text-slate-500"># Test 2 Curl Command</span>
+          <div class="text-emerald-400 mt-1">curl -X GET "https://risukko.com/api/asset/UklBAGEAAAAEAAEAPwAAAEFOS0EtMDE3Mjg="</div>
+        </div>
+        <div>
+          <span class="text-slate-500"># Test 3 Curl Command</span>
+          <div class="text-emerald-400 mt-1">curl -X GET "https://risukko.com/api/asset/UklBAGEAAAAEAAEAPwAAAEFOS0EtMDE3Mjg="</div>
+        </div>
       </div>
     </section>
 
@@ -272,7 +286,7 @@
       const output = document.getElementById(`output-${candidate.toLowerCase()}`);
 
       output.classList.remove('hidden');
-      output.innerHTML = `✓ [Candidate ${candidate}] Packet generated for <b>${email}</b><br>ID Hash: <code>${btoa(graphId).slice(0, 16)}...</code><br>Status: Lossless RGB Triplet Packed.`;
+      output.innerHTML = `[Candidate ${candidate}] Packet generated for <b>${email}</b><br>ID Hash: <code>${btoa(graphId).slice(0, 16)}...</code><br>Status: Lossless RGB Triplet Packed.`;
     }
   </script>
 </body>

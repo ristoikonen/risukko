@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risukko Glow2 UI Suite — Light Mode</title>
+    <title>White1 — Light Mode</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -64,22 +64,21 @@
     <!-- Crisp Light Header -->
     <header class="border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand with Risukko 2-way matrix SVG Icon -->
+            <!-- Brand -->
             <div class="flex items-center space-x-4">
-                <div class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-coral-500/10 border border-blue-500/30 shadow-soft-blue p-2">
-                    <!-- Risukko 2-way matrix SVG icon -->
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600">
-                        <path d="M3 3H10V10H3V3Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 3H21V10H14V3Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 14H10V21H3V14Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 14H21V21H14V14Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                <div class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-coral-500/10 border border-blue-500/30 shadow-soft-blue">
+                    <i class="fa-solid fa-cube text-blue-600 text-xl animate-pulse"></i>
                     <div class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div>
                     <div class="flex items-center space-x-2">
                         <h1 class="text-xl font-bold tracking-wider bg-gradient-to-r from-blue-600 via-coral-500 to-emerald-600 bg-clip-text text-transparent">RISUKKO</h1>
-                        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-mono">Glow2 v2.4</span>
+                        <!-- <span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-mono">Glow2 v2.4</span> -->
+                        
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-black-100 text-emerald-800">
+          <span class="w-1.5 h-1.5 mr-1.5 bg-emerald-500 rounded-full animate-pulse"></span>API Active
+        </span>
+
                     </div>
                     <p class="text-xs text-slate-500 font-mono">High-Density Lossless Data-to-Image Engine • GF(2^8) Reed-Solomon</p>
                 </div>
@@ -108,8 +107,8 @@
         <!-- Navigation Tabs -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto space-x-2 py-2 border-t border-slate-100">
             <button onclick="switchTab('identity')" id="btn-identity" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium flex items-center space-x-2 transition-all whitespace-nowrap bg-blue-50 text-blue-700 border border-blue-200 shadow-sm">
-                <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 text-blue-600"><path d="M3 3H10V10H3V3Z" fill="currentColor" stroke="currentColor" stroke-width="2"/><path d="M14 3H21V10H14V3Z" stroke="currentColor" stroke-width="2"/></svg>
-                <span>1. Identity & Candidates</span>
+                <i class="fa-solid fa-id-card"></i>
+                <span>1. Identity & Encoder</span>
             </button>
             <button onclick="switchTab('matrix')" id="btn-matrix" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium flex items-center space-x-2 transition-all whitespace-nowrap bg-slate-50 text-slate-600 border border-slate-200 hover:text-coral-600 hover:border-coral-200">
                 <i class="fa-solid fa-table-cells"></i>
@@ -137,172 +136,99 @@
     <!-- Main Content Container -->
     <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
 
-        <!-- TAB 1: Identity & 3 Input Candidates -->
-        <section id="tab-identity" class="tab-pane space-y-8">
-            <!-- Header description for input variants -->
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light">
-                <div class="flex items-center space-x-3 mb-2">
-                    <div class="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
-                        <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5"><path d="M3 3H10V10H3V3Z" fill="currentColor" stroke="currentColor" stroke-width="2"/><path d="M14 3H21V10H14V3Z" stroke="currentColor" stroke-width="2"/></svg>
-                    </div>
-                    <div>
-                        <h2 class="text-base font-bold text-slate-900">Risukko Identity Input Candidates (Email & Graph ID)</h2>
-                        <p class="text-xs text-slate-500 font-mono">Select any of the three polished candidate input variants below to map credentials into the GF(2^8) loss-less matrix.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- THREE CANDIDATE UI VARIANTS FOR INPUT FORMS -->
+        <!-- TAB 1: Identity & Encoder -->
+        <section id="tab-identity" class="tab-pane space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-                <!-- CANDIDATE A: Modern Split-Card Form with live validation & badges -->
-                <div class="bg-white border border-blue-200 rounded-2xl p-6 shadow-soft-blue flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-mono px-3 py-1 rounded-bl-xl font-bold">VARIANT A</div>
+                <!-- Input Controls Card -->
+                <div class="lg:col-span-1 bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-2 text-blue-600">
-                            <i class="fa-solid fa-id-card text-lg"></i>
-                            <h3 class="font-bold text-sm">Modern Split-Card</h3>
-                        </div>
-                        <p class="text-xs text-slate-500">Structured layout with live validation badges and parameter selectors.</p>
-
-                        <div>
-                            <label class="block text-xs font-mono text-slate-600 mb-1 font-semibold">USER IDENTITY EMAIL</label>
-                            <input type="email" id="input-email-a" value="developer@risukko.io" oninput="syncInputs('a')" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-mono">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-base font-semibold text-blue-600 flex items-center space-x-2">
+                                <i class="fa-solid fa-sliders"></i>
+                                <span>Encoding Parameters</span>
+                            </h2>
+                            <span class="text-xs font-mono bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md border border-blue-200">14-Byte Packet</span>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-mono text-slate-600 mb-1 font-semibold">GRAPH ID HASH</label>
-                            <input type="text" id="input-graphid-a" value="RSK-9920-ALPHA" oninput="syncInputs('a')" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-mono">
+                            <label class="block text-xs font-mono text-slate-500 mb-1 font-medium">USER IDENTITY EMAIL</label>
+                            <input type="email" id="input-email" value="developer@risukko.io" oninput="updateEncoder()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-mono">
+                            <p class="text-[11px] text-slate-400 mt-1 font-mono">Mapped to primary ID payload stream.</p>
                         </div>
 
-                        <div class="flex items-center justify-between text-xs font-mono bg-blue-50 p-3 rounded-xl border border-blue-100 text-blue-700">
-                            <span>Validation Status:</span>
-                            <span class="font-bold text-emerald-600 flex items-center space-x-1"><i class="fa-solid fa-circle-check"></i> <span>Valid 14B</span></span>
+                        <div>
+                            <label class="block text-xs font-mono text-slate-500 mb-1 font-medium">GRAPH ID STRING / HASH</label>
+                            <input type="text" id="input-graphid" value="RSK-9920-ALPHA-GF8" oninput="updateEncoder()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all font-mono">
+                            <p class="text-[11px] text-slate-400 mt-1 font-mono">Unique graph hash signature token.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-mono text-slate-500 mb-1 font-medium">REDUNDANCY %</label>
+                                <select id="input-redundancy" onchange="updateEncoder()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 font-mono">
+                                    <option value="12">12.5% (RS-2)</option>
+                                    <option value="25" selected>25.0% (RS-4)</option>
+                                    <option value="50">50.0% (RS-8)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-500 mb-1 font-medium">ALPHA PINNING</label>
+                                <select id="input-alpha" onchange="updateEncoder()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-blue-600 font-mono">
+                                    <option value="255" selected>255 (Opaque)</option>
+                                    <option value="128">128 (Semi)</option>
+                                    <option value="0">0 (Transparent)</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-slate-100">
-                        <button onclick="triggerEncodeAction('Variant A')" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-soft-blue transition-all flex items-center justify-center space-x-2">
+                        <button onclick="triggerEncodeAction()" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-soft-blue transition-all flex items-center justify-center space-x-2">
                             <i class="fa-solid fa-bolt"></i>
-                            <span>Encode Variant A</span>
+                            <span>Execute Lossless Encode</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- CANDIDATE B: Floating Label Minimalist Input with inline preview -->
-                <div class="bg-white border border-coral-200 rounded-2xl p-6 shadow-soft-coral flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-coral-500 text-white text-[10px] font-mono px-3 py-1 rounded-bl-xl font-bold">VARIANT B</div>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-2 text-coral-600">
-                            <i class="fa-solid fa-layer-group text-lg"></i>
-                            <h3 class="font-bold text-sm">Floating Minimalist</h3>
+                <!-- Live Binary Packet Inspection & GF(2^8) Math Breakdown -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-sm font-semibold text-blue-600 font-mono flex items-center space-x-2">
+                                <i class="fa-solid fa-binary"></i>
+                                <span>Live 14-Byte Binary Packet Inspection</span>
+                            </h3>
+                            <button onclick="copyElementText('packet-hex', 'Binary packet hex copied!')" class="text-xs text-slate-600 hover:text-blue-600 transition-colors font-mono flex items-center space-x-1 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Copy Hex</span>
+                            </button>
                         </div>
-                        <p class="text-xs text-slate-500">Sleek clean form with floating styling and inline quick actions.</p>
+                        <div id="packet-hex" class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs text-blue-700 overflow-x-auto leading-relaxed">
+                            Loading packet stream...
+                        </div>
+                    </div>
 
-                        <div class="relative pt-2">
-                            <label class="block text-xs font-mono text-slate-600 mb-1 font-semibold">USER IDENTITY EMAIL</label>
-                            <div class="relative">
-                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-regular fa-envelope"></i></span>
-                                <input type="email" id="input-email-b" value="developer@risukko.io" oninput="syncInputs('b')" class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-coral-500 focus:bg-white transition-all font-mono">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-sm font-semibold text-emerald-600 font-mono flex items-center space-x-2">
+                                <i class="fa-solid fa-atom"></i>
+                                <span>Galois Field GF(2^8) Primitive Polynomial Breakdown</span>
+                            </h3>
+                            <span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">Irreducible: x^8 + x^4 + x^3 + x^2 + 1</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                <div class="text-slate-400 mb-1">GENERATOR POLY</div>
+                                <div class="text-slate-800 font-semibold" id="gf-gen">g(x) = ∏ (x - α^i)</div>
                             </div>
-                        </div>
-
-                        <div class="relative pt-2">
-                            <label class="block text-xs font-mono text-slate-600 mb-1 font-semibold">GRAPH ID HASH</label>
-                            <div class="relative">
-                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-hashtag"></i></span>
-                                <input type="text" id="input-graphid-b" value="RSK-9920-ALPHA" oninput="syncInputs('b')" class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-coral-500 focus:bg-white transition-all font-mono">
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                <div class="text-slate-400 mb-1">SYNDROME VECTOR</div>
+                                <div class="text-blue-600 font-semibold" id="gf-syn">[0x8A, 0x42, 0x1F, 0x93]</div>
                             </div>
-                        </div>
-
-                        <div class="flex items-center justify-between text-xs font-mono bg-coral-50 p-3 rounded-xl border border-coral-100 text-coral-700">
-                            <span>Alpha Pinning:</span>
-                            <span class="font-bold text-coral-600">255 (Opaque)</span>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-4 border-t border-slate-100">
-                        <button onclick="triggerEncodeAction('Variant B')" class="w-full py-3 px-4 rounded-xl bg-coral-500 hover:bg-coral-600 text-white font-semibold text-sm shadow-soft-coral transition-all flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            <span>Encode Variant B</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- CANDIDATE C: Terminal Command Line Style Input with prompt styling -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between relative overflow-hidden text-white">
-                    <div class="absolute top-0 right-0 bg-emerald-500 text-slate-900 text-[10px] font-mono px-3 py-1 rounded-bl-xl font-bold">VARIANT C</div>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-2 text-emerald-400">
-                            <i class="fa-solid fa-terminal text-lg"></i>
-                            <h3 class="font-bold text-sm font-mono">Terminal CLI Prompt</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 font-mono">Interactive CLI-themed shell input for high-speed developers.</p>
-
-                        <div>
-                            <label class="block text-xs font-mono text-emerald-400 mb-1">$ risukko --email</label>
-                            <input type="email" id="input-email-c" value="developer@risukko.io" oninput="syncInputs('c')" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-emerald-300 focus:outline-none focus:border-emerald-500 transition-all font-mono">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-mono text-emerald-400 mb-1">$ risukko --graph-id</label>
-                            <input type="text" id="input-graphid-c" value="RSK-9920-ALPHA" oninput="syncInputs('c')" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-emerald-300 focus:outline-none focus:border-emerald-500 transition-all font-mono">
-                        </div>
-
-                        <div class="flex items-center justify-between text-xs font-mono bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-300">
-                            <span>CLI Stream:</span>
-                            <span class="font-bold text-emerald-400 font-mono">READY // 0x11D</span>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-4 border-t border-slate-800">
-                        <button onclick="triggerEncodeAction('Variant C')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-soft-emerald transition-all flex items-center justify-center space-x-2 font-mono">
-                            <i class="fa-solid fa-play"></i>
-                            <span>$ ./encode --run</span>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Live Binary Packet Inspection & GF(2^8) Math Breakdown -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-sm font-semibold text-blue-600 font-mono flex items-center space-x-2">
-                            <i class="fa-solid fa-binary"></i>
-                            <span>Live 14-Byte Binary Packet Inspection</span>
-                        </h3>
-                        <button onclick="copyElementText('packet-hex', 'Binary packet hex copied!')" class="text-xs text-slate-600 hover:text-blue-600 transition-colors font-mono flex items-center space-x-1 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200">
-                            <i class="fa-regular fa-copy"></i>
-                            <span>Copy Hex</span>
-                        </button>
-                    </div>
-                    <div id="packet-hex" class="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-xs text-blue-700 overflow-x-auto leading-relaxed">
-                        Loading packet stream...
-                    </div>
-                </div>
-
-                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-card-light">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-sm font-semibold text-emerald-600 font-mono flex items-center space-x-2">
-                            <i class="fa-solid fa-atom"></i>
-                            <span>Galois Field GF(2^8) Primitive Polynomial Breakdown</span>
-                        </h3>
-                        <span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">Irreducible: x^8 + x^4 + x^3 + x^2 + 1</span>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
-                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-                            <div class="text-slate-400 mb-1">GENERATOR POLY</div>
-                            <div class="text-slate-800 font-semibold" id="gf-gen">g(x) = ∏ (x - α^i)</div>
-                        </div>
-                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-                            <div class="text-slate-400 mb-1">SYNDROME VECTOR</div>
-                            <div class="text-blue-600 font-semibold" id="gf-syn">[0x8A, 0x42, 0x1F, 0x93]</div>
-                        </div>
-                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
-                            <div class="text-slate-400 mb-1">ERROR CAPACITY</div>
-                            <div class="text-emerald-600 font-semibold" id="gf-err">t = 2 symbol corrections</div>
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                <div class="text-slate-400 mb-1">ERROR CAPACITY</div>
+                                <div class="text-emerald-600 font-semibold" id="gf-err">t = 2 symbol corrections</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -687,41 +613,10 @@ pub fn encode_lossless(data: &[u8], redundancy: usize) -> Vec&lt;RgbTriplet&gt; 
             document.body.removeChild(textarea);
         }
 
-        // Sync inputs across all 3 candidate forms and update encoder
-        function syncInputs(variant) {
-            let emailVal = '';
-            let graphIdVal = '';
-
-            if (variant === 'a') {
-                emailVal = document.getElementById('input-email-a').value;
-                graphIdVal = document.getElementById('input-graphid-a').value;
-                document.getElementById('input-email-b').value = emailVal;
-                document.getElementById('input-graphid-b').value = graphIdVal;
-                document.getElementById('input-email-c').value = emailVal;
-                document.getElementById('input-graphid-c').value = graphIdVal;
-            } else if (variant === 'b') {
-                emailVal = document.getElementById('input-email-b').value;
-                graphIdVal = document.getElementById('input-graphid-b').value;
-                document.getElementById('input-email-a').value = emailVal;
-                document.getElementById('input-graphid-a').value = graphIdVal;
-                document.getElementById('input-email-c').value = emailVal;
-                document.getElementById('input-graphid-c').value = graphIdVal;
-            } else if (variant === 'c') {
-                emailVal = document.getElementById('input-email-c').value;
-                graphIdVal = document.getElementById('input-graphid-c').value;
-                document.getElementById('input-email-a').value = emailVal;
-                document.getElementById('input-graphid-a').value = graphIdVal;
-                document.getElementById('input-email-b').value = emailVal;
-                document.getElementById('input-graphid-b').value = graphIdVal;
-            }
-
-            updateEncoder(emailVal, graphIdVal);
-        }
-
         // Encoder State Update
-        function updateEncoder(emailOverride, graphIdOverride) {
-            const email = emailOverride || document.getElementById('input-email-a').value || 'user@risukko.io';
-            const graphId = graphIdOverride || document.getElementById('input-graphid-a').value || 'RSK-000';
+        function updateEncoder() {
+            const email = document.getElementById('input-email').value || 'user@risukko.io';
+            const graphId = document.getElementById('input-graphid').value || 'RSK-000';
             const combined = email + ':' + graphId;
 
             let hexString = '';
@@ -737,9 +632,8 @@ pub fn encode_lossless(data: &[u8], redundancy: usize) -> Vec&lt;RgbTriplet&gt; 
             document.getElementById('packet-hex').innerText = hexString.trim();
         }
 
-        function triggerEncodeAction(variantName) {
-            showToast(`Lossless 14-byte packet encoded via ${variantName}!`);
-            switchTab('matrix');
+        function triggerEncodeAction() {
+            showToast('Lossless 14-byte packet encoded & pinned successfully!');
         }
 
         // Pixel Matrix Mock Data & Renderer

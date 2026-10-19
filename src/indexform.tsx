@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function indexform() {
@@ -107,7 +104,7 @@ function indexform() {
                   class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#f43f5e] focus:border-[#f43f5e] text-sm font-mono outline-none transition-all"/>
               </div>
               <button type="submit" class="w-full py-3 bg-[#f78522] hover:bg-rose-600 text-white font-medium rounded-xl text-sm shadow-sm transition-colors">
-                Execute Pipeline (Candidate B)
+                Execute Pipeline (Candidate Bt)
               </button>
             </form>
           </div>

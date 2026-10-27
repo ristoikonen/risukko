@@ -28,9 +28,9 @@ export function rgbPixelsToBytes(pixelData: Uint8ClampedArray, originalByteLengt
   let byteCount = 0;
 
   for (let i = 0; i < pixelData.length && byteCount < originalByteLength; i += 4) {
-    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i];     // Red
-    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i + 1]; // Green
-    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i + 2]; // Blue
+    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i]!;     // Red
+    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i + 1]!; // Green
+    if (byteCount < originalByteLength) bytes[byteCount++] = pixelData[i + 2]!; // Blue
   }
 
   return bytes;

@@ -95,6 +95,151 @@ export default function App() {
           <span className="text-xs text-slate-400">{userEmail}</span>
         </div>
 
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="100%" height="100%">
+  <rect width="1100" height="320" fill="#FFFFFF" />
+  <defs>
+    <g id="ap">
+      <circle cx="0" cy="0" r="5.5" fill="#E67E22" stroke="#B95C00" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="2.2" fill="#F39C12" />
+    </g>
+    <g id="cp">
+      <circle cx="0" cy="0" r="4.5" fill="#2980B9" stroke="#1F618D" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="1.8" fill="#A9CCE3" />
+    </g>
+    <g id="np">
+      <circle cx="0" cy="0" r="4" fill="#223C5B" stroke="#38577B" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="1.5" fill="#7FB3D5" />
+    </g>
+  </defs>
+<style
+  dangerouslySetInnerHTML={{
+    __html: `
+      .gl { stroke: #E5E8E8; stroke-width: 1px; stroke-dasharray: 4,4; fill: none; }
+      .or { stroke: #223C5B; stroke-width: 3.5px; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .is { stroke: #38577B; stroke-width: 2.2px; stroke-dasharray: 6,5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .cs { stroke: #2980B9; stroke-width: 1.4px; stroke-dasharray: 3,3; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .ct { stroke: #E67E22; stroke-width: 1.8px; stroke-linecap: round; fill: none; }
+    `,
+  }}
+/>
+
+  <g className="gl">
+    <line x1="30" y1="80" x2="1070" y2="80" />
+    <line x1="30" y1="145" x2="1070" y2="145" />
+    <line x1="30" y1="215" x2="1070" y2="215" />
+    <circle cx="115" cy="145" r="45" />
+    <circle cx="615" cy="145" r="65" />
+    <circle cx="740" cy="145" r="65" />
+    <circle cx="985" cy="145" r="55" />
+  </g>
+
+  <g transform="translate(60,65)">
+    <path d="M25,80 L25,150" className="or" />
+    <path d="M25,80 L25,150" className="is" />
+
+    <path d="M25,95 L45,80 L75,80 L95,95" className="or" />
+    <path d="M25,95 L45,80 L75,80 L95,95" className="is" />
+    <line x1="25" y1="95" x2="45" y2="80" className="ct" />
+    <use href="#ap" x="25" y="80" />
+
+    <use href="#ap" x="25" y="150" />
+
+    <use href="#np" x="75" y="80" />
+    <use href="#ap" x="95" y="95" />
+  </g>
+
+  <g transform="translate(195,65)">
+    <polygon points="25,25 35,35 25,45 15,35" className="or" />
+    <polygon points="25,28 32,35 25,42 18,35" className="is" />
+    <use href="#ap" x="25" y="35" />
+    <path d="M25,80 L25,150" className="or" />
+    <path d="M25,80 L25,150" className="is" />
+
+
+    <use href="#np" x="25" y="115" />
+    <use href="#ap" x="25" y="150" />
+  </g>
+
+  <g transform="translate(290,65)">
+    <path d="M90,92 L72,80 L40,80 L24,96 L36,112 L74,118 L88,134 L72,150 L38,150 L20,138" className="or" />
+    <path d="M90,92 L72,80 L40,80 L24,96 L36,112 L74,118 L88,134 L72,150 L38,150 L20,138" className="is" />
+
+    <use href="#ap" x="90" y="92" />
+    <use href="#np" x="72" y="80" />
+
+    <use href="#ap" x="24" y="96" />
+
+    <use href="#ap" x="88" y="134" />
+    <use href="#np" x="72" y="150" />
+
+    <use href="#ap" x="20" y="138" />
+  </g>
+
+  <g transform="translate(435,65)">
+    <path d="M22,80 L22,130 L38,148 L74,148 L90,130 L90,80" className="or" />
+    <path d="M22,80 L22,130 L38,148 L74,148 L90,130 L90,80" className="is" />
+
+    <path d="M90,125 L90,150" className="or" />
+    <use href="#ap" x="22" y="80" />
+    <use href="#np" x="22" y="130" />
+
+    <use href="#np" x="90" y="130" />
+    <use href="#ap" x="90" y="80" />
+    <use href="#ap" x="90" y="150" />
+  </g>
+
+  <g transform="translate(570,65)">
+    <path d="M22,25 L22,150" className="or" />
+    <path d="M22,25 L22,150" className="is" />
+
+    <path d="M22,110 L52,95 L85,80" className="or" />
+    <path d="M22,110 L52,95 L85,80" className="is" />
+    <path d="M44,100 L88,150" className="or" />
+    <path d="M44,100 L88,150" className="is" />
+    <use href="#ap" x="22" y="25" />
+
+    <use href="#ap" x="22" y="110" />
+    <use href="#ap" x="22" y="150" />
+    <use href="#np" x="52" y="95" />
+    <use href="#ap" x="85" y="80" />
+    <use href="#ap" x="88" y="150" />
+  </g>
+
+  <g transform="translate(695,65)">
+    <path d="M22,25 L22,150" className="or" />
+    <path d="M22,25 L22,150" className="is" />
+
+    <path d="M22,110 L52,95 L85,80" className="or" />
+    <path d="M22,110 L52,95 L85,80" className="is" />
+    <path d="M44,100 L88,150" className="or" />
+    <path d="M44,100 L88,150" className="is" />
+    <use href="#ap" x="22" y="25" />
+
+    <use href="#ap" x="22" y="110" />
+    <use href="#ap" x="22" y="150" />
+    <use href="#np" x="52" y="95" />
+    <use href="#ap" x="85" y="80" />
+    <use href="#ap" x="88" y="150" />
+  </g>
+
+  <g transform="translate(825,65)">
+    <polygon points="55,78 85,88 98,115 98,125 85,142 55,150 25,142 12,125 12,115 25,88" className="or" />
+    <polygon points="55,78 85,88 98,115 98,125 85,142 55,150 25,142 12,125 12,115 25,88" className="is" />
+    <polygon points="55,92 76,98 84,115 84,125 76,134 55,138 34,134 26,125 26,115 34,98" className="cs" />
+    <use href="#ap" x="55" y="78" />
+
+    <use href="#np" x="98" y="120" />
+
+    <use href="#ap" x="55" y="150" />
+
+    <use href="#np" x="12" y="120" />
+
+  </g>
+</svg>
+
+
         <h2 className="text-xl font-bold mb-6 text-slate-200">Create 3D Volumetric Identifier</h2>
 
         <form onSubmit={handleGenerate} className="space-y-6">
